@@ -6,10 +6,31 @@ namespace Proj2
     {
         static void Main(string[] args)
         {
+            Book b1 = new Book();
+            Title n = new Title();
+            Console.WriteLine("Enter the data of book:");
+            Console.Write("name: ");
+            b1.name.TitleName = Console.ReadLine();
+            Console.Write("author: ");
+            b1.author.AuthorName = Console.ReadLine();
+            Console.Write("content: ");
+            b1.content.ContentName = Console.ReadLine();
+            Console.WriteLine("about book: ");
+            b1.Show();            
             
         }
         class Book
         {
+            public Title name = new Title();
+            public Author author = new Author();
+            public Content content = new Content();
+
+            public void Show() 
+            {
+                this.name.Show();
+                this.author.Show();
+                this.content.Show();
+            }
 
         }
         class Title
@@ -21,7 +42,6 @@ namespace Proj2
                 Console.WriteLine($"Title: {this.TitleName}");
             }
 
-
         }
         class Content
         {
@@ -29,7 +49,7 @@ namespace Proj2
             public void Show() 
             {
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
-                Console.WriteLine($"Title: {this.ContentName}");
+                Console.WriteLine($"Author: {this.ContentName}");
             }
 
         }
@@ -39,7 +59,7 @@ namespace Proj2
             public void Show() 
             {
                 Console.ForegroundColor = ConsoleColor.Magenta;
-                Console.WriteLine($"Title: {this.AuthorName}");
+                Console.WriteLine($"Content: {this.AuthorName}");
             }
         }
     }

@@ -19,6 +19,7 @@ namespace Proj2
             b1.Show();            
             
         }
+
         class Book
         {
             public Title name = new Title();
@@ -64,3 +65,14 @@ namespace Proj2
         }
     }
 }
+        /*при создании класса Book, изначально поля были добавлены так: 
+        class Book
+        {
+                public Title name {get; set};
+                public Author name {get; set};
+                public Content name {get; set};
+        }
+        это стало причиной того что в поле класса нельзя было передать данные,
+        ошибку исправила просмотрев код других студентов академии,
+        на выложенном ими репозитории
+        */
